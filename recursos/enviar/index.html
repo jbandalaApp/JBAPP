@@ -1,0 +1,879 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Rostros</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<!--<meta content="width=device-width, initial-scale=1.0, minimum-scale=.5, maximum-scale=1.0, user-scalable=yes" name="viewport" />
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="Pragma" CONTENT="no-cache">No Guarda cache -->
+
+<link rel="stylesheet" href="css/ios.css">
+<link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.mobile-1.3.1.min.js"></script>
+<script src="phonegap.js" type="text/javascript"></script>
+<script src="js/modernizr.js"></script>
+<!-- slide principal -->
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+<script src="js/modernizr.js"></script>
+<!-- slide sec -->
+
+<!-- CSS -->
+	<!--	<link rel = "stylesheet" href = "css/default.css" />
+		<link rel = "stylesheet" media = "screen" href = "css/common.css" />-->
+		
+		<!-- JS -->
+		<!--<script src = "jquery-1.8.2.min.js"></script>-->
+		<!--<script src = "js/jquery.easing-1.3.js"></script>
+		<script src = "js/jquery.iosslider.js"></script>
+		<script src = "js/common.js"></script>-->
+
+
+
+<!-- galeria -->
+<link href="galeria/styles_galeria.css" type="text/css" rel="stylesheet" />
+<link href="galeria/photoswipe.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="galeria/klass.min.js"></script>
+	<script type="text/javascript" src="galeria/code.photoswipe-3.0.4.min.js"></script>
+	<script type="text/javascript">
+
+		(function(window, PhotoSwipe){
+		
+			document.addEventListener('DOMContentLoaded', function(){
+			
+				var
+					options = {},
+					instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery a'), options );
+					
+					
+					// onBeforeShow
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeShow, function(e){
+						console.log('onBeforeShow');
+					});
+					
+					// onShow
+					instance.addEventHandler(PhotoSwipe.EventTypes.onShow, function(e){
+						console.log('onShow');
+					});
+					
+					// onBeforeHide
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeHide, function(e){
+						console.log('onBeforeHide');
+					});
+					
+					// onHide
+					instance.addEventHandler(PhotoSwipe.EventTypes.onHide, function(e){
+						console.log('onHide');
+					});
+					
+					// onDisplayImage
+					instance.addEventHandler(PhotoSwipe.EventTypes.onDisplayImage, function(e){
+						console.log('onDisplayImage{');
+						console.log('onDisplayImage - e.action = ' + e.action);
+						console.log('onDisplayImage - e.index = ' + e.index);
+						console.log(instance.getCurrentImage());
+						console.log('onDisplayImage}');
+					});
+					
+					// onResetPosition
+					instance.addEventHandler(PhotoSwipe.EventTypes.onResetPosition, function(e){
+						console.log('onResetPosition');
+					});
+					
+					// onSlideshowStart
+					instance.addEventHandler(PhotoSwipe.EventTypes.onSlideshowStart, function(e){
+						console.log('onSlideshowStart');
+					});
+					
+					// onSlideshowStop
+					instance.addEventHandler(PhotoSwipe.EventTypes.onSlideshowStop, function(e){
+						console.log('onSlideshowStop');
+					});
+					
+					// onTouch
+					instance.addEventHandler(PhotoSwipe.EventTypes.onTouch, function(e){
+						console.log('onTouch{');
+						console.log('onTouch - e.action = ' + e.action);
+						console.log('onTouch - e.point = ');
+						console.log(e.point);
+						console.log('onTouch}');
+					});
+					
+					// onBeforeCaptionAndToolbarShow
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeCaptionAndToolbarShow, function(e){
+						console.log('onBeforeCaptionAndToolbarShow');
+					});
+					
+					// onCaptionAndToolbarShow
+					instance.addEventHandler(PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e){
+						console.log('onCaptionAndToolbarShow');
+					});
+					
+					// onBeforeCaptionAndToolbarHide
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeCaptionAndToolbarHide, function(e){
+						console.log('onBeforeCaptionAndToolbarHide');
+					});
+					
+					// onCaptionAndToolbarHide
+					instance.addEventHandler(PhotoSwipe.EventTypes.onCaptionAndToolbarHide, function(e){
+						console.log('onCaptionAndToolbarHide');
+					});
+					
+					// onToolbarTap
+					instance.addEventHandler(PhotoSwipe.EventTypes.onToolbarTap, function(e){
+						console.log('onToolbarTap');
+						console.log(e);
+					});
+					
+					// onBeforeZoomPanRotateShow
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeZoomPanRotateShow, function(e){
+						console.log('onBeforeZoomPanRotateShow');
+					});
+					
+					// onZoomPanRotateShow
+					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateShow, function(e){
+						console.log('onZoomPanRotateShow');
+					});
+					
+					// onBeforeZoomPanRotateHide
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeZoomPanRotateHide, function(e){
+						console.log('onBeforeZoomPanRotateHide');
+					});
+					
+					// onZoomPanRotateHide
+					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateHide, function(e){
+						console.log('onZoomPanRotateHide');
+					});
+					
+					// onZoomPanRotateTransform
+					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateTransform, function(e){
+						console.log('onZoomPanRotateTransform');
+						console.log(e);
+					});
+					
+			}, false);
+			
+			
+		}(window, window.Code.PhotoSwipe));
+		
+	</script>
+<!--Codigo js  -->
+</head> 
+<body>
+
+<div id="panelSecciones" >
+	<ul >
+         <li id="rubrica"><a href="#" onClick="javascript:slide_home('#page1');" id="rubrica_name"><img src="img/iconos_app/home@2x.png" height="26" width="26" />HOME</a></li>
+            <li id="separador"></li>
+            <li   id="rubrica"><a href="#" onClick="javascript:slide_principal('puebla','#page2');" id="rubrica_name">Puebla</a></li>
+            <li id="separador"></li>
+            <li   id="rubrica"><a href="#" onClick="javascript:slide_principal('jalisco','#page2');" id="rubrica_name">Jalisco</a></li>
+            <li id="separador"></li>
+            <li  id="rubrica"><a href="#" onClick="javascript:slide_principal('veracruz','#page2');" id="rubrica_name">Veracruz</a></li>
+            <li id="separador"></li>
+            <li  id="rubrica"><a href="#" onClick="javascript:slide_principal('chiapas','#page2');" id="rubrica_name">Chiapas</a></li>
+            <li id="separador"></li>
+            <li  id="rubrica"><a href="#" onClick="javascript:slide_principal('hidalgo','#page2');" id="rubrica_name">Hidalgo</a></li>
+            <li id="separador"></li>
+            <li  id="rubrica"><a href="#" onClick="javascript:slide_principal('tlaxcala','#page2');" id="rubrica_name">Tlaxcala</a></li>
+            <li id="separador"></li>
+            <li  id="rubrica"><a href="#" onClick="javascript:slide_principal('yucatan','#page2');" id="rubrica_name">Yucat&aacute;n</a></li>
+            <li id="separador"></li>
+            <li  id="rubrica"><a href="#" onClick="javascript:slide_principal('oaxaca','#page2');" id="rubrica_name">Oaxaca</a></li>
+            <li id="separador_2"></li>
+            <li  id="rubrica"><a href="mailto:admin-web@sintesisdigital.com.mx" id="rubrica_name">Contacto</a></li>
+    </ul>
+</div> 
+	
+    <!--<a href="javascript:;" id="btn_edicion"><img src="img/iconos_app/boton_ediciones.png" border="0"/></a>-->
+  
+
+
+<!--<div data-role="page" id="page">
+	<div data-role="content" style="width:100%; height:100%;background:#000;">
+        <video  id="intro"  src="video/intro-ios.mp4" type="video/mp4" style="width:100%; height:100%;background:#000;"></video>
+	</div>
+</div>-->
+  
+   <div data-role="page" id="page1" class="pagina" data-transition="false" style="background:#000;">
+        <div data-role="content" style="width:100%; height:100%;background:#000; margin:0;">
+
+            <div align="center" id="menu_inicial">
+             	<div id="img_menu_menu">
+                <img src="" id="img_menu_ini"></div>
+             </div>
+            
+            
+             <div id="link_menu"><!--onClick="cambiar_pagina('#page2')"  -->
+             <a href="#page2"  data-ajax="false" ><div id="events"></div></a>
+             <a href="https://itunes.apple.com/us/app/revistadigital/id674245096?l=es&ls=1&mt=8" target="new"><div id="d_magazine"></div></a>
+             <a href=""><div id="reality"></div></a>
+             </div>
+        </div>
+    </div>
+  
+  
+<div data-role="page" id="page2" class="pagina" style="background:#000;">
+
+	<div data-role="header" data-position="fixed" class="cabecera_prin">
+		<div class="contenido_cabecera">
+        	<div class="cab_menu">
+            	<a href="javascript:;" id="btn_edicion">
+                <!--<img src="img/iconos_app/boton_ediciones.png" border="0"/>-->
+                <img src="" id="img_btn_edicion">
+                </a>
+                <!-- -->
+            </div>
+            <div class="logo_r">
+            	<a href="#page1"  data-ajax="false" ><img src="img/logo.png" width="131" height="42" id="img_logo" ></a>
+            </div>
+        </div>
+        <div class="linea_cabecera"></div>
+	</div>
+    
+	<div data-role="content" style="width:100%; height:100%;background:#000; margin:0;">	
+		<div id="contenido_slide" class="contenido_slide">
+        	<!--  inicio slide -->
+             <section class="slider">
+                <div class="flexslider">
+                  <ul class="slides">
+                        <li class="lista_slider">
+                        	<div id="cont_img" class="cont_img"  onClick="fotogaleria_muestra()">
+                            <img src="img/fotos/2.jpg" class="foto_evnt" />
+                            	
+                            </div>
+                	
+                    
+                            <div id="slide_sec1" class="slide_sec" >
+                           		 <div id="Gallery" class="gallery" style="z-index:999999999">
+                                 	<div id="galeria_contenido">
+                                    	<div class="img_galeria"> <a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/2.jpg"><img src="img/fotos/2.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/3.jpg"><img src="img/fotos/3.jpg" /></a></div>
+                                        <div class="img_galeria"> <a href="img/fotos/4.jpg"><img src="img/fotos/4.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/5.jpg"><img src="img/fotos/5.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/6.jpg"><img src="img/fotos/6.jpg" /></a></div>
+                                        <div class="img_galeria"> <a href="img/fotos/7.jpg"><img src="img/fotos/7.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/8.jpg"><img src="img/fotos/8.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/9.jpg"><img src="img/fotos/9.jpg" /></a></div>
+                                        <div class="img_galeria"> <a href="img/fotos/10.jpg"><img src="img/fotos/10.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/11.jpg"><img src="img/fotos/11.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/12.jpg"><img src="img/fotos/12.jpg" /></a></div>
+                                    </div>
+       					 		 </div>
+                            </div>
+                            
+                            <div id="box_sumario1" class="box_sumario"> 
+                                    <div class="titulo_evento">Titulo1</div>
+                                    <div class="sumario_evento" id="su_evt">Sumario</div>
+                                    <div class="edicion_revista">Edicion</div>
+                            </div>
+                            
+                        
+                        </li>
+                        
+                        
+                         <li class="lista_slider">
+                        	<div id="cont_img" class="cont_img" onClick="">
+                            	<img src="img/fotos/1.jpg" class="foto_evnt" />
+                            </div>
+                	
+                    
+                            <div id="slide_sec1" class="slide_sec" >
+                            	<div id="Gallery" class="gallery">
+                                 	<div id="galeria_contenido">
+                                    	<div class="img_galeria"> <a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/2.jpg"><img src="img/fotos/2.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/3.jpg"><img src="img/fotos/3.jpg" /></a></div>
+                                        <div class="img_galeria"> <a href="img/fotos/4.jpg"><img src="img/fotos/4.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/5.jpg"><img src="img/fotos/5.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/6.jpg"><img src="img/fotos/6.jpg" /></a></div>
+                                        <div class="img_galeria"> <a href="img/fotos/7.jpg"><img src="img/fotos/7.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/8.jpg"><img src="img/fotos/8.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/9.jpg"><img src="img/fotos/9.jpg" /></a></div>
+                                        <div class="img_galeria"> <a href="img/fotos/10.jpg"><img src="img/fotos/10.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/11.jpg"><img src="img/fotos/11.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/12.jpg"><img src="img/fotos/12.jpg" /></a></div>
+                                    </div>
+       					 		 </div>
+                            </div>
+                            
+                            <div id="box_sumario1" class="box_sumario"> 
+                                    <div class="titulo_evento">Titulo1</div>
+                                    <div class="sumario_evento" id="su_evt">Sumario</div>
+                                    <div class="edicion_revista">Edicion</div>
+                            </div>
+                            
+                         </li>
+                        <li class="lista_slider">
+                        	<div id="cont_img" class="cont_img" onClick="">
+                            	<img src="img/fotos/5.jpg" class="foto_evnt" />
+                            </div>
+                	
+                    
+                            <div id="slide_sec1" class="slide_sec" >
+                            	<div id="Gallery" class="gallery">
+                                 	<div id="galeria_contenido">
+                                    	<div class="img_galeria"> <a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/2.jpg"><img src="img/fotos/2.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/3.jpg"><img src="img/fotos/3.jpg" /></a></div>
+                                        <div class="img_galeria"> <a href="img/fotos/4.jpg"><img src="img/fotos/4.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/5.jpg"><img src="img/fotos/5.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/6.jpg"><img src="img/fotos/6.jpg" /></a></div>
+                                        <div class="img_galeria"> <a href="img/fotos/7.jpg"><img src="img/fotos/7.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/8.jpg"><img src="img/fotos/8.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/9.jpg"><img src="img/fotos/9.jpg" /></a></div>
+                                        <div class="img_galeria"> <a href="img/fotos/10.jpg"><img src="img/fotos/10.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/11.jpg"><img src="img/fotos/11.jpg" /></a></div>
+                                        <div class="img_galeria"><a href="img/fotos/12.jpg"><img src="img/fotos/12.jpg" /></a></div>
+                                    </div>
+       					 		 </div>
+                            </div>
+                            
+                            <div id="box_sumario1" class="box_sumario"> 
+                                    <div class="titulo_evento">Titulo1</div>
+                                    <div class="sumario_evento" id="su_evt">Sumario</div>
+                                    <div class="edicion_revista">Edicion</div>
+                            </div>
+                            
+                            
+                         </li>
+                         
+                          <li class="lista_slider">
+                          	<div id="secciones" >
+                                <div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/conoce.jpg" /></a></div>
+                                <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/conoce.jpg" /></a></div>
+                                <div class="img_secciones_ipad"><a href="#page4"><img src="img/conoce.jpg" /></a></div>
+                            </div>
+                          </li>
+                          
+                          <li class="lista_slider">
+                          	<div id="secciones" >
+                                <div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/bystyle.jpg" /></a></div>
+                                <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/bystyle.jpg" /></a></div>
+                                <div class="img_secciones_ipad"><a href="#page4"><img src="img/bystyle.jpg" /></a></div>
+                            </div>
+                          </li>
+                          <li class="lista_slider">
+                          	<div id="secciones" >
+                                <div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/consientete.jpg" /></a></div>
+                                <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/consientete.jpg" /></a></div>
+                                <div class="img_secciones_ipad"><a href="#page4"><img src="img/consientete.jpg" /></a></div>
+                            </div>
+                          </li>
+                          <li class="lista_slider">
+                          	<div id="secciones" >
+                                <div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/disfruta.jpg" /></a></div>
+                                <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/disfruta.jpg" /></a></div>
+                                <div class="img_secciones_ipad"><a href="#page4"><img src="img/disfruta.jpg" onClick="javascript:fn_secciones('#page4');"/></a></div>
+                            </div>
+                          </li>
+                          
+                          <li class="lista_slider">
+                          	<div id="cont_img" class="cont_img" ><a href="#" ><img src="img/fotos/5.jpg" onClick="javascript:eventos_especiales('#page3');" /></a></div>
+
+                           <div id="r_nom_persona" class="r_nom_persona" >
+                                    <DIV>NOMBRE DE LA PERSONA</DIV>
+                            </div>
+        
+        
+                            <div id="sum_rostros" class="sum_rostros"> 
+                                    <div class="titulo_evento">NOMBRE DE LA SECCION</div>
+                            </div>
+
+                </div>
+                          
+                          </li>
+                       
+                  </ul>
+                </div>
+              </section>
+            
+            
+            <!-- fin slide -->
+        	
+        </div>			
+	</div>
+	
+</div>
+
+<div data-role="page" id="page3" class="pagina" style="background:#000;">
+
+	<div data-role="header" data-position="fixed" class="cabecera_prin">
+		<div class="contenido_cabecera_int">
+        	<div class="cab_menu_int">
+            	<a href="javascript:;" id="btn_edicion2">
+                <!--<img src="img/iconos_app/boton_ediciones.png" border="0"/>-->
+                <img src="" id="img_btn_edicion2">
+                </a>
+                <!-- -->
+            </div>
+             <div id="fecha_int">
+         <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha.png"  id="flecha_int_rostros"/></a>
+         </div>
+            <div class="logo_r_int">
+            	<a href="#page1"  data-ajax="false" ><img src="img/logo.png" width="131" height="42" id="img_logo"></a>
+            </div>
+        </div>
+        <div class="linea_cabecera"></div>
+	</div>
+	
+    <div data-role="content" id="cont_evento_especial" >	
+   		
+       <div id="foto_rostros" class="foto_rostros">
+       <div id="carousel2" class="flexslider">
+          <ul class="slides">
+          <div id="flecha_mas_seccion" ><img src="img/iconos_app/mas.png" width="30" height="30" id="flecha_mas_seccion_img"></div>
+           		  
+                 <li>
+  	    	   		<div class="img_int_rostros_ipodIpad"><img src="img/fotos/1.jpg" /></div>
+                        <div class="img_int_rostros_iphone"><img src="img/iphone/bystyle.jpg" /></div>
+  	    		</li>
+                 <li>
+  	    	   		<div class="img_int_rostros_ipodIpad"><img src="img/fotos/1.jpg" /></div>
+                        <div class="img_int_rostros_iphone"><img src="img/iphone/bystyle.jpg" /></div>
+  	    		</li>
+                <li>
+  	    	   		<div class="img_int_rostros_ipodIpad"><img src="img/fotos/1.jpg" /></div>
+                        <div class="img_int_rostros_iphone"><img src="img/iphone/bystyle.jpg" /></div>
+  	    		</li>
+  	    	
+          </ul>
+        </div>
+        	<!--<div class = 'snap-slider'>
+		
+			<div class = 'slider'>
+			
+				<div class = 'item' id = 'item1'>
+                
+                    <div id="flecha_mas_rostros" ><img src="img/iconos_app/mas.png" width="30" height="30" id="flecha_mas_rostros_img"></div>
+                    <div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
+                        <div class="img_int_rostros_iphone"><img src="img/iphone/bystyle.jpg" /></div>
+                </div>
+				<div class = 'item' id = 'item1'>
+                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
+                    <div class="img_int_rostros_iphone"><img src="img/iphone/bystyle.jpg" /></div>
+                </div>
+				<div class = 'item' id = 'item1'>
+                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
+                    <div class="img_int_rostros_iphone"><img src="img/iphone/conoce.jpg" /></div>
+                </div>
+                <div class = 'item' id = 'item1'>
+                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
+                    <div class="img_int_rostros_iphone"><img src="img/iphone/consientete.jpg" /></div>
+                </div>
+                <div class = 'item' id = ''>
+                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
+                   <div class="img_int_rostros_iphone"><img src="img/iphone/disfruta.jpg" /></div>
+                </div>
+			</div>
+		
+			</div>-->	
+        </div>
+        <div id="descripcion_rostros" class="descripcion_rostros">
+        	<div id="r_descripcion" class="r_descripcion">
+            	<div id="r_name" class="r_name" >
+                	<span class="r_nombre"> ALEJANDRO</span><br>
+                    <span class="r_apellido" > OCHOA</span>
+                </div>
+                <div class="r_separador"></div>
+            	<div class="r_texto">
+                	<span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                   <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br><span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+               
+                </div>
+            </div>
+        	<div id="r_flecha" class="r_flecha">
+            <a href="javascript:;" id="r_flecha1">
+        <img src="img/iconos_app/indicador.png" />
+         </a>
+            </div>
+        </div>
+          
+     </div>
+    
+</div>
+
+<div data-role="page" id="page4" class="pagina" style="background:#000;">
+
+	<div data-role="header" data-position="fixed" class="cabecera_prin">
+		<div class="contenido_cabecera_int">
+        	<div class="cab_menu_int">
+            	<a href="javascript:;" id="btn_edicion3">
+                <!--<img src="img/iconos_app/boton_ediciones.png" border="0"/>-->
+                <img src="" id="img_btn_edicion3">
+                </a>
+                <!-- -->
+            </div>
+             <div id="fecha_int">
+         <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha.png"  id="flecha_int_rostros"/></a>
+         </div>
+            <div class="logo_r_int">
+            	<a href="#page1"  data-ajax="false" ><img src="img/logo.png" width="131" height="42" id="img_logo"></a>
+            </div>
+        </div>
+        <div class="linea_cabecera"></div>
+	</div>
+	
+	<div data-role="content" id="content_secciones">	
+        <div id="foto_seccion" class="foto_seccion">
+        <div id="carousel" class="flexslider">
+          <ul class="slides">
+          <div id="flecha_mas_seccion" ><img src="img/iconos_app/mas.png" width="30" height="30" id="flecha_mas_seccion_img"></div>
+           		 <li>
+  	    	   		<div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                	<div class="img_int_secciones_iphone"><img src="img/iphone/bystyle.jpg" /></div>
+  	    		</li>
+  	    		<li>
+  	    	   		<div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                	<div class="img_int_secciones_iphone"><img src="img/iphone/bystyle.jpg" /></div>
+  	    		</li>
+                <li>
+  	    	   		<div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                	<div class="img_int_secciones_iphone"><img src="img/iphone/bystyle.jpg" /></div>
+  	    		</li>
+                <li>
+  	    	   		<div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                	<div class="img_int_secciones_iphone"><img src="img/iphone/bystyle.jpg" /></div>
+  	    		</li>
+  	    	
+          </ul>
+        </div>
+        	<!--<div class = 'snap-slider'>
+		
+                <div class = 'slider slider_seccion'>
+                
+                    <div class = 'item' id = 'item1'>
+                    
+                        <div id="flecha_mas_seccion" ><img src="img/iconos_app/mas.png" width="30" height="30" id="flecha_mas_seccion_img"></div>
+                        <div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                            <div class="img_int_secciones_iphone"><img src="img/iphone/bystyle.jpg" /></div>
+                    </div>
+                    <div class = 'item' id = 'item1'>
+                        <div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                        <div class="img_int_secciones_iphone"><img src="img/iphone/bystyle.jpg" /></div>
+                    </div>
+                    <div class = 'item' id = 'item1'>
+                        <div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                        <div class="img_int_secciones_iphone"><img src="img/iphone/conoce.jpg" /></div>
+                    </div>
+                    <div class = 'item' id = 'item1'>
+                        <div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                        <div class="img_int_secciones_iphone"><img src="img/iphone/conciente.jpg" /></div>
+                    </div>
+                    <div class = 'item' id = ''>
+                        <div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                       <div class="img_int_secciones_iphone"><img src="img/iphone/disfruta.jpg" /></div>
+                    </div>
+                </div>
+		
+			</div>	-->
+        </div>
+        <div id="descripcion_seccion" class="descripcion_seccion" >
+        	<div id="s_descripcion" class="s_descripcion">
+            	<div id="s_name" class="s_name" >
+                	<span class="s_titulo"> HIDRATA</span><br>
+                    <span class="s_subtitulo" > TU PIEL</span>
+                </div>
+                <div class="s_separador"></div>
+            	<div class="s_texto">
+                	<span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                   <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br><span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+               
+                </div>
+            </div>
+        	<div id="s_flecha" class="s_flecha">
+            <a href="javascript:;" id="s_flecha2">
+        <img src="img/iconos_app/indicador.png" />
+         </a>
+            </div>
+        </div>
+          
+     </div>
+	
+</div>
+
+
+
+
+
+<div data-role="page" id="page5" class="pagina" style="background:#000;">
+
+	<div data-role="header" data-position="fixed" class="cabecera_prin">
+		<div class="contenido_cabecera_int">
+        	<div class="cab_menu_int">
+            	<a href="javascript:;" id="btn_edicion4">
+                <!--<img src="img/iconos_app/boton_ediciones.png" border="0"/>-->
+                <img src="" id="img_btn_edicion4">
+                </a>
+                <!-- -->
+            </div>
+             <div id="fecha_int">
+         <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha.png"  id="flecha_int_rostros"/></a>
+         </div>
+            <div class="logo_r_int">
+            	<a href="#page1"  data-ajax="false" ><img src="img/logo.png" width="131" height="42" id="img_logo"></a>
+            </div>
+        </div>
+        <div class="linea_cabecera"></div>
+	</div>
+	<div data-role="content" style="width:100%; height:100%;background:#000; margin:0;" id="cont_publi">	
+				<div id="div_publi">
+                
+                </div>
+	</div>
+</div>
+
+
+<div data-role="page" id="page6" class="pagina" style="background:#000;">
+
+	<div data-role="header" data-position="fixed" class="cabecera_prin">
+		<div class="contenido_cabecera">
+        	<div class="cab_menu">
+            	<a href="javascript:;" id="btn_edicion5">
+                <!--<img src="img/iconos_app/boton_ediciones.png" border="0"/>-->
+                <img src="" id="img_btn_edicion5">
+                </a>
+                <!-- -->
+            </div>
+            <div class="logo_r">
+            	<a href="#page1"  data-ajax="false" ><img src="img/logo.png" width="131" height="42" id="img_logo"></a>
+            </div>
+        </div>
+        <div class="linea_cabecera"></div>
+	</div>
+	<div data-role="content" style="width:100%; height:100%;background:#000; margin:0;" id="cont_publi">	
+				<div id="div_publi">
+                
+                </div>
+	</div>
+</div>
+<script>
+slide_principal("puebla","");
+
+
+function fotogaleria_muestra()
+{
+	alert("foto ga");
+}
+
+
+function slide_principal(plaza, pagina)
+    {
+	/*	//alert("slide principal");
+        ////url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/slide_principal.php",
+        $.ajax({
+               type: "POST",
+              url: "http://desarrollosintesis.com/ios/Rostros/php/slide_principal.php",
+               data: "plaza="+plaza,
+				cache: false,
+               success: function(message)
+               {
+				 alert("recibes");
+               $('#contenido_slide').html(message);
+			
+               }
+               });
+			  
+			   if(pagina=="")
+			   {}
+			   else
+			   { //alert("mandas");
+			   window.location.href = pagina; }*/
+       
+    }
+
+
+
+
+
+
+$(document).bind("mobileinit", function(){
+$.mobile.defaultPageTransition = 'none';
+});
+function cambiar_pagina(pagina)
+{
+	//alert("pagina");
+	 window.location.href = pagina;
+	}
+	//boton ediciones  
+	$('#img_logo').click(function() {
+		$('#panelSecciones').hide();
+		//alert("btn seccion");
+	});
+	$('#btn_edicion').click(function() {
+		$('#panelSecciones').slideToggle(800);
+		//alert("btn seccion");
+	});
+	$('#btn_edicion2').click(function() {
+		$('#panelSecciones').slideToggle(800);
+		//alert("btn seccion");
+	});
+	$('#btn_edicion3').click(function() {
+		$('#panelSecciones').slideToggle(800);
+		//alert("btn seccion");
+	});
+	$('#btn_edicion4').click(function() {
+		$('#panelSecciones').slideToggle(800);
+		//alert("btn seccion");
+	});
+	$('#btn_edicion5').click(function() {
+		$('#panelSecciones').slideToggle(800);
+		//alert("btn seccion");
+	});
+	
+	/*animacion  slide interior*/
+	$("#r_flecha1").click(function(){
+    $("#r_descripcion").animate({width:'toggle'});
+  });
+  
+  $("#s_flecha2").click(function(){
+    $("#s_descripcion").animate({width:'toggle'});
+  });
+		
+	function video()
+    {
+        var video=document.getElementById("intro");
+     
+
+        video.play();
+        video.addEventListener('ended', function(){
+                               //alert("se termina");
+                               var pagina="#page1";
+                               window.location.href = pagina;
+                               });
+    }	
+		
+	if(screen.width=="320" && screen.height=="480")
+	{
+		/*boton edicones*/
+		var image = $("#img_btn_edicion");
+	image.attr("src", "img/iconos_app/menu.png");
+	/*imagen menu*/
+	var img_menu = $("#img_menu_ini");
+	img_menu.attr("src", "img/iphone_ipod/menu_ipod.jpg");
+	
+	/*ocultamos secciones*/
+	$(".img_secciones_ipod").css("display","");
+		$(".img_secciones_iphone").css("display","none");
+		$(".img_secciones_ipad").css("display","none");
+	
+	
+	}
+	else
+	{
+		if(screen.width=="320" && screen.height=="568")
+		{	
+		
+			/*imagen menu*/
+			var img_menu = $("#img_menu_ini");
+			img_menu.attr("src", "img/iphone_ipod/menu_iphone.jpg");
+			/*Ocutanso secciones*/
+			$(".img_secciones_ipod").css("display","none");
+			$(".img_secciones_iphone").css("display","");
+			$(".img_secciones_ipad").css("display","none");
+			
+		}
+		else
+		{
+			var image = $("#img_btn_edicion");
+			image.attr("src", "img/iconos_app/boton_ediciones.png");
+			
+			var image2 = $("#img_btn_edicion2");
+			image2.attr("src", "img/iconos_app/boton_ediciones.png");
+			
+			var image3 = $("#img_btn_edicion3");
+			image3.attr("src", "img/iconos_app/boton_ediciones.png");
+			
+			var image4 = $("#img_btn_edicion4");
+			image4.attr("src", "img/iconos_app/boton_ediciones.png");
+			var image5 = $("#img_btn_edicion5");
+			image5.attr("src", "img/iconos_app/boton_ediciones.png");
+			
+			/*imagen menu*/
+			var img_menu = $("#img_menu_ini");
+			img_menu.attr("src", "img/menu.jpg");
+			
+			/*Ocultamos secciones*/
+			$(".img_secciones_ipod").css("display","none");
+			$(".img_secciones_iphone").css("display","none");
+			$(".img_secciones_ipad").css("display","");
+		}
+	}
+			
+	
+
+</script>
+<script defer src="js/jquery.flexslider.js"></script>
+  
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+		
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+	  
+	   $('#carousel').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        itemWidth: 210,
+        itemMargin: 5,
+        asNavFor: '#slider'
+      });
+	  
+	  $('#carousel2').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        itemWidth: 210,
+        itemMargin: 5,
+        asNavFor: '#slider'
+      });
+	  
+	  
+    });
+  </script>
+ 
+</body>
+</html>

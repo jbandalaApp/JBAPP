@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JBandala|App</title>
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=.5, maximum-scale=1.0, user-scalable=yes" name="viewport" />
+<meta charset="UTF-8">
+ 
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+    <script type="text/javascript" src="recursos/slide/jquery.immersive-slider.js"></script>
+  <link href='recursos/slide/immersive-slider.css' rel='stylesheet' type='text/css'>
+   
+
+    <style>
+  
+    .wrapper {
+        height: auto !important;
+        height: 100%;
+        margin: 0 auto; 
+        overflow: hidden;
+    }
+    
+    
+    .pointer {
+      color: #9b59b6;
+      font-family: 'Pacifico', cursive;
+      font-size: 30px;
+      margin-top: 15px;
+    }
+   
+
+    .main {
+      float: left;
+      width: 100%;
+      margin: 0 auto;
+      background: #161923;
+    }
+   
+   
+    
+    .reload.bell {
+      font-size: 12px;
+      padding: 20px;
+      width: 45px;
+      text-align: center;
+      height: 47px;
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+    }
+    
+    .reload.bell #notification {
+      font-size: 25px;
+      line-height: 140%;
+    }
+    
+    .reload, .btn{
+      display: inline-block;
+      border: 4px solid #A2261E;
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      background: #CC3126;
+      display: inline-block;
+      line-height: 100%;
+      padding: 0.7em;
+      text-decoration: none;
+      color: #fff;
+      width: 100px;
+      line-height: 140%;
+      font-size: 17px;
+      font-family: open sans;
+      font-weight: bold;
+    }
+    .reload:hover{
+      background: #A2261E;
+    }
+    .btn {
+      width: 200px;
+      color: #fff;
+      border: none;
+      margin-left: 10px;
+      background: black;
+    }
+    .clear {
+      width: auto;
+    }
+    .btn:hover, .btn:hover {
+      background: rgba(0,0,0,0.8);
+    }
+    .btns {
+      width: 410px;
+      margin: 50px auto;
+    }
+    .credit {
+      text-align: center;
+      color: #444;
+      padding: 10px;
+      margin: 0 0 0 0;
+      background: #161923;
+      color: #FFF;
+      float: left;
+      width: 100%;
+    }
+    .credit a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center;
+      display: block;
+      padding: 7px;
+      width: 100%;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      background: rgba(255, 255, 255, 0.25);
+      font-weight: bold;
+      font-size: 13px;
+      color: #000;
+      -webkit-transition: all 200ms ease-out;
+      -moz-transition: all 200ms ease-out;
+      -o-transition: all 200ms ease-out;
+      transition: all 200ms ease-out;
+    }
+    .back:hover {
+      color: black;
+      background: rgba(255, 255, 255, 0.5);
+    }
+    
+    
+    .page_container {
+      max-width: 100%;
+    }
+
+    .header {
+      background: white;
+      padding-top: 10px;
+      margin-bottom: 0;
+    }
+    .header h1{
+      margin-bottom: 0;
+      font-size: 45px;
+    }
+
+    .header .menu {
+      padding-bottom: 10px;
+    }
+
+  
+    .immersive_slider .is-slide .content h2{
+      line-height: 140%;
+      font-weight: 100;
+      color: white;
+      font-weight: 100;
+    }
+    .immersive_slider .is-slide .content a {
+      color: white;
+    }
+  
+  .immersive_slider .is-slide .content p{
+    float: left;
+    font-weight: 100;
+    width: 100%;
+    font-size: 17px;
+    margin-top: 5px;
+  }
+    </style>
+   <script src="phonegap.js" type="text/javascript"></script>
+</head>
+ <body>
+
+<div data-role="page" id="page">
+<!-- panel -->
+        <div data-role="panel" id="panelMenu" data-position="left" data-display="reveal">
+    
+            <div id="opcionesMenu" >
+            	<ul >
+                     <li id="rubrica"><a href="#page"  id="rubrica_name" data-transition='slide'><img src="recursos/iconos/home.png" height="26" width="26" class='menu_icon'/><span class='rb'>HOME</span></a></li>
+                        <li id="separador"></li>
+                        <li   id="rubrica"><a href="#llave_en_mano"  id="rubrica_name" data-transition='slide'><img src="recursos/iconos/llave.png" height="26" width="26" class='menu_icon'/><span class='rb'>Llave en Mano</span></a></li>
+                        <li id="separador"></li>
+                        <li   id="rubrica"><a href="#creacion_de_marca"  id="rubrica_name" data-transition='slide'><img src="recursos/iconos/marca.png" height="26" width="26" class='menu_icon'/><span class='rb'>Creacion de Marca</span></a></li>
+                        <li id="separador"></li>
+                        <li  id="rubrica"><a href="#estrategia_digital"  id="rubrica_name" data-transition='slide'><img src="recursos/iconos/digital.png" height="26" width="26" class='menu_icon'/><span class='rb'>Estrategia Digital</span></a></li>
+                        <li id="separador"></li>
+                        <li  id="rubrica"><a href="#consultoria_estrategica"  id="rubrica_name" data-transition='slide'><img src="recursos/iconos/consultoria.png" height="26" width="26" class='menu_icon'/><span class='rb'>Consultoría Estratégica</span></a></li>
+                        <li id="separador"></li>
+                        <li  id="rubrica"><a href="#fotografia"  id="rubrica_name" data-transition='slide'><img src="recursos/iconos/fotos.png" height="26" width="26" class='menu_icon'/><span class='rb'>Fotografía y video</span></a></li>
+                        <li id="separador"></li>
+                        <li  id="rubrica"><a href="#gastronomia" id="rubrica_name" data-transition='slide'><img src="recursos/iconos/gastronomia.png" height="26" width="26" class='menu_icon' /><span class='rb'>Consultoría Gastronónica</span></a></li>
+                        <li id="separador"></li>
+                        <li  id="rubrica"><a href="#contacto"  id="rubrica_name" data-transition='slide'><img src="recursos/iconos/contacto.png" height="26" width="26" class='menu_icon'/><span class='rb'>Contacto</span></a></li>
+                       
+                </ul>
+			</div>
+        </div>
+    <!-- /panel -->
+
+
+    <div data-role="header" data-position="fixed" id='cabecera' >
+    <div class='cebecera_up'></div>
+   <span class='icono_barras'><a href="#panelMenu" data-role="button" data-icon="bars" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><span class='logo_app'><img src='recursos/logo.png'></span></h1>
+    </div>
+    
+    <div data-role="content" id="contenedor"  > 
+        
+    	<div id="slide_principal">
+          <div class="wrapper">
+            <div class="main">
+              <div class="page_container">
+                <div id="immersive_slider">
+                  <div class="slide" data-blurred="recursos/slide/img/1.jpg"></div>
+                  <div class="slide" data-blurred="recursos/slide/img/2.jpg"></div>
+                  <div class="slide" data-blurred="recursos/slide/img/3.jpg"></div>
+                  <div class="slide" data-blurred="recursos/slide/img/4.jpg"></div>
+                  <div class="slide" data-blurred="recursos/slide/img/5.jpg"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+<!-- Portafolio -->
+        <div id='portafolio'>
+           
+        </div>
+
+    </div>
+   
+</div>
+
+<!--Empresas-->
+<!-- jaguar-->
+<div data-role="page" id="empresa1" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/jaguar.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                A esta firma le trabajamos la fotografía de su producto, para la publicidad de la marca, así como toda la realización de lonas y banners para la misma publicidad, también se le realiza todo lo de manejo en redes sociales.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- land_rover-->
+<div data-role="page" id="empresa2" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/land_rover.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                A esta firma le trabajamos la fotografía de su producto, para la publicidad de la marca, así como toda la realización de lonas y banners para la misma publicidad, también se le realiza todo lo de manejo en redes sociales.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- la_vista-->
+<div data-role="page" id="empresa3" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/la_vista.png' >
+            </div>
+
+            <div class='texto_servicio'>
+               A esta firma se le realizó el diseño y programación de página web.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- san_angel-->
+<div data-role="page" id="empresa4" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/san_angel.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Diseño y programación de pagina web, en el caso de este cliente se mantiene en constante mantenimiento, es decir, actualiando las promociones y anuncios que quieran dar a conocer.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- la_mostaza-->
+<div data-role="page" id="empresa5" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/la_mostaza.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam massa urna, tristique in tempor et, ornare congue elit. Donec vel ante et enim rutrum pretium vel eget purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam mauris dolor, bibendum eget auctor condimentum, cursus eget leo. Cras vel neque a ipsum vulputate lobortis in quis diam. Cras eget congue justo. 
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- praga_15-->
+<div data-role="page" id="empresa6" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/praga_15.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Se realizo su Identidad Corporativa, así como el Diseño Web y programación, complementando esto con Fotografía  para diseños de publicaciones y aplicaciones.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- los_remedios-->
+<div data-role="page" id="empresa7" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/los_remedios.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Se consiguió el distintivo H con una calificación de 100/100,  fotografía  Social en eventos tanto como fotografía de producto.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- amalfi-->
+<div data-role="page" id="empresa8" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/amalfi.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Rediseño de identidad corporativa del restaurante junto con una seción fotográfica del menú, aplicaciones tales como menú, tarjetas de presentación, etc. y diseño pagina web programada.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- la_encomienda-->
+<div data-role="page" id="empresa9" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/la_encomienda.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Se renovo su distintivo H consiguiendo una calificación de 100/100, realizamos  Diseño y programación de pagina web, tanto como fotografía social  y de producto, diseño de artes para publicaciones en revistas y diseño Mailling.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- cafiver-->
+<div data-role="page" id="empresa10" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/cafiver.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Diseño de sitio web
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- palmira-->
+<div data-role="page" id="empresa11" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/palmira.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Se sertifico con el distintivo H, obteniendo una calificación aprobatoria de un 100/100.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- pm_collection-->
+<div data-role="page" id="empresa12" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/pm_collection.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Una pagina web de coleccionistas de arte, en la cual pueden subir lo que van adquiriendo y mostrandolo a publico, al igual que registrar usuarios para estar pendiendes de las nuevas obras.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- fin empresas-->
+<div data-role="page" id="llave_en_mano" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor">   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/llaveenamo.jpg' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/iconos_servicios/llave.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Analizamos los objetivos, necesidades y requerimentos del proyecto, alineando la estrategia mediante: Análisis, Producción, Implementación y Evaluación. 
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+
+<div data-role="page" id="creacion_de_marca" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+    <span class='btn_regresar'> <a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+    
+    <div data-role="content" id="contenedor">   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/creaciondemarca.jpg' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/iconos_servicios/marca.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Desarrollamos soluciones creativas y efectivas mediante el conocimiento y entendimiento del mercado meta, dirigiéndonos a el gráficamente de forma clara y sencilla, homologando la comunicación institucional así como todos sus lineamientos de marca. 
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<div data-role="page" id="estrategia_digital" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+    
+    <div data-role="content" id="contenedor">   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/desarrolloweb.jpg' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/iconos_servicios/desarrollo.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Desarrollarmos plataformas de sitios web, con nueva tecnología, siempre innovando y manteniendo cada proyecto actualizado. 
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<div data-role="page" id="consultoria_estrategica" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+    
+    <div data-role="content" id="contenedor">   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/consultoriaestrategica.jpg' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/iconos_servicios/consultoria.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Alineamos la visión y liderazgo del proyecto, consolidando el concepto y generando el crecimiento de su marca.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<div data-role="page" id="fotografia" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+    
+    <div data-role="content" id="contenedor">   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/fotoyvideo.jpg' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/iconos_servicios/foto.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Realizamos Fotografías de estudio; de producto, en alto contraste añadimos el plus de retoques digitales para resaltar cada fotografía.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<div data-role="page" id="gastronomia" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+    
+    <div data-role="content" id="contenedor">   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/consultoriagatronomica.jpg' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/iconos_servicios/gastronomia.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Aportamos pasión, experiencia  y dirección en las áreas  de cocina, barra  y servicio dentro de los restaurantes, contribuyendo en la implementación y cumplimiento de procesos de calidad  e higiene. 
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<div data-role="page" id="contacto" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+    <div data-role="content" id="contenedor">   
+
+        <div class="content-primary" id='content_form'>
+            <div id='titulo'><h3>Dejanos tu comentario<br><br></h3></div>
+            <form action='' method='post'>
+                <div class='elemento_formulario'>
+                    <input id="name"  type="text" data-mini="true" name="name" placeholder='Nombre'>
+                </div><div class='imagen_formulario'><img src='recursos/iconos/nombre.PNG' ></div>
+
+                <div class='elemento_formulario'>
+                    <input type='text' name='email' id='email' data-mini="true" placeholder='Correo Electrónico'>
+                </div><div class='imagen_formulario'><img src='recursos/iconos/correo.PNG' ></div>
+
+                <div class='elemento_formulario'>
+                    <input type='text' name='telefono' id='telefono' data-mini="true" placeholder='Teléfono'>
+                </div><div class='imagen_formulario'><img src='recursos/iconos/telefono.PNG' ></div>
+                 
+                 
+                 
+                <div id='titulo'>Selecciona un Servicio</div>
+                 <div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+                    <fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-vertical ui-mini" data-role="controlgroup" data-mini="true">
+                        <div role="heading" class="ui-controlgroup-label"></div>
+                        <div class="ui-controlgroup-controls">
+                    
+                             <div class="ui-radio"><input name="radio-choice-1" id="radio-choice-1" value="Llave en mano" checked="checked" type="radio"><label class="ui-btn ui-mini ui-btn-icon-left ui-radio-on ui-corner-top ui-btn-up-c" data-mini="true" data-theme="c" data-icon="radio-off" data-wrapperels="span" data-iconshadow="true" data-shadow="false" data-corners="true" for="radio-choice-1"><span class="ui-btn-inner ui-corner-top"><span class="ui-btn-text">Llave en mano</span></span></label></div>
+                        
+
+                        <div class="ui-radio"><input name="radio-choice-1" id="radio-choice-2" value="Creacion de Marca" type="radio"><label class="ui-btn ui-mini ui-btn-icon-left ui-radio-off ui-btn-up-c" data-mini="true" data-theme="c" data-icon="radio-off" data-wrapperels="span" data-iconshadow="true" data-shadow="false" data-corners="true" for="radio-choice-2"><span class="ui-btn-inner"><span class="ui-btn-text">Creacion de Marca</span><span class="ui-icon ui-icon-radio-off ui-icon-shadow">&nbsp;</span></span></label></div>
+                        
+
+                        <div class="ui-radio"><input name="radio-choice-1" id="radio-choice-3" value="Estrategia Digital" type="radio"><label class="ui-btn ui-mini ui-btn-icon-left ui-radio-off ui-btn-up-c" data-mini="true" data-theme="c" data-icon="radio-off" data-wrapperels="span" data-iconshadow="true" data-shadow="false" data-corners="true" for="radio-choice-3"><span class="ui-btn-inner"><span class="ui-btn-text">Estrategia digital</span><span class="ui-icon ui-icon-radio-off ui-icon-shadow">&nbsp;</span></span></label></div>
+                        
+
+                        <div class="ui-radio"><input name="radio-choice-1" id="radio-choice-4" value="Consultoria Estrategica" type="radio"><label class="ui-btn ui-mini ui-btn-icon-left ui-radio-off ui-corner-bottom ui-controlgroup-last ui-btn-up-c" data-mini="true" data-theme="c" data-icon="radio-off" data-wrapperels="span" data-iconshadow="true" data-shadow="false" data-corners="true" for="radio-choice-4"><span class="ui-btn-inner ui-corner-bottom ui-controlgroup-last"><span class="ui-btn-text">Consultoría estratégica</span><span class="ui-icon ui-icon-radio-off ui-icon-shadow">&nbsp;</span></span></label></div>
+
+                        <div class="ui-radio"><input name="radio-choice-1" id="radio-choice-5" value="Consultoria Gatronomica" type="radio"><label class="ui-btn ui-mini ui-btn-icon-left ui-radio-off ui-corner-bottom ui-controlgroup-last ui-btn-up-c" data-mini="true" data-theme="c" data-icon="radio-off" data-wrapperels="span" data-iconshadow="false" data-shadow="false" data-corners="true" for="radio-choice-5"><span class="ui-btn-inner ui-corner-bottom ui-controlgroup-last"><span class="ui-btn-text">Consultoría gastronómica</span><span class="ui-icon ui-icon-radio-off ui-icon-shadow">&nbsp;</span></span></label></div>
+                        
+                </div></fieldset></div>
+                <textarea type='text' name='mensaje' id='mensaje' style='resize:none;' placeholder='Comentarios'></textarea>
+                
+                <div style='width:100%; text-align: right; height:50px;'>
+
+                    
+
+                    <div class="ui-block-b" ui-mini ui style='float:right; right:50px;'><span class="ui-btn-inner ui-btn-corner-all"><button aria-disabled="false" class="ui-btn-hidden" type="button" data-theme="a" data-mini="true" onclick='enviar();'>Enviar</button></div>
+                
+                </div>
+                
+
+
+            </form>
+        </div>
+
+
+        <!--
+                <div class="ui-block-a"><button aria-disabled="false" class="ui-btn-hidden" type="submit" data-theme="d" data-mini="true">Cancelar</button></div>
+                <div class="ui-block-b" ui-mini ui><span class="ui-btn-inner ui-btn-corner-all"><button aria-disabled="false" class="ui-btn-hidden" type="submit" data-theme="a" data-mini="true">Enviar</button></div>
+                
+        </form>  -->     
+    </div>
+    
+</div>
+
+
+
+</body>
+
+
+<script type="text/javascript">
+  /*  $(document).ready(function(e){
+    document.addEventListener("deviceready", function(){
+
+      alert("j");
+       
+        
+    
+    }); 
+});*/
+    $(document).ready(function(){
+
+		 $("#immersive_slider").immersive_slider({
+          container: ".main"
+        });
+       //MEnu
+	   $( "#panelMenu" ).trigger( "updatelayout" );
+
+	   CargarPortafolio();
+	   
+    });
+
+
+    function CargarPortafolio()
+            {
+                $.ajax({
+                        type: "POST",
+                        url: "php/portafolio.php",
+                        data: "",
+                        cache: false,
+                        success: function(message)
+                        {
+                       $('#portafolio').html(message);
+                        }
+                    });
+        
+            } 
+    function enviar()
+      {
+        alert();
+        var nombre=$('#name').val();
+        var email=$('#email').val();
+        var telefono=$('#telefono').val();
+        var servicio= $("input[name='radio-choice-1']:checked").val();
+        var mensaje=$('#mensaje').val();
+
+
+        $.ajax(
+        {
+          url: "php/correo.php",
+          type: "POST",
+          data: "nombre=" + nombre + "&telefono=" + telefono+ "&email=" + email + "&servicio=" + servicio + "&mensaje=" + mensaje,
+          cache: false,
+          processData:false,
+          success: function(message)
+          {
+          //alert("mensaje");
+          if(message==1){
+            alert("Mensaje Enviado");
+            $('#name').val('');
+           $('#email').val('');
+            $('#telefono').val('');
+            $('#mensaje').val('');
+
+            
+          }
+          else{
+            alert("no enviado");
+            
+          }
+          }
+        });
+
+      }
+</script>
+</html>
