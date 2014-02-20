@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script src="js/jquery.mobile-1.4.0.min.js"></script>
-    
 
     <script type="text/javascript" src="recursos/slide/jquery.immersive-slider.js"></script>
   <link href='recursos/slide/immersive-slider.css' rel='stylesheet' type='text/css'>
@@ -211,8 +209,8 @@
 
 
     <div data-role="header" data-position="fixed" id='cabecera' >
-       <div class='cebecera_up'></div>
-       <span class='icono_barras'><a href="#panelMenu" data-role="button" data-icon="bars" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+    <div class='cebecera_up'></div>
+   <span class='icono_barras'><a href="#panelMenu" data-role="button" data-icon="bars" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
         <h1><span class='logo_app'><img src='recursos/logo.png'></span></h1>
     </div>
     
@@ -236,69 +234,7 @@
 
 <!-- Portafolio -->
         <div id='portafolio'>
-           <div class='empresa'>
-      <a href="#empresa1" data-transition="slide"><img src='recursos/logos_empresas/land_rover.png?123'></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa2" data-transition="slide"><img src='recursos/logos_empresas/jaguar.png?123' ></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa3" data-transition="slide"><img src='recursos/logos_empresas/la_vista.png?128' ></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa6" data-transition="slide"><img src='recursos/logos_empresas/praga_15.png?121' ></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa6" data-transition="slide"><img src='recursos/logos_empresas/merinhos.png?121' ></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa6" data-transition="slide"><img src='recursos/logos_empresas/permachef.png?121' ></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa4" data-transition="slide"><img src='recursos/logos_empresas/san_angel.png?129' ></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa9" data-transition="slide"><img src='recursos/logos_empresas/la_encomienda.png?155' ></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa7" data-transition="slide"><img src='recursos/logos_empresas/los_remedios.png?199' ></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa7" data-transition="slide"><img src='recursos/logos_empresas/a_takear.png?199' ></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa11" data-transition="slide"><img src='recursos/logos_empresas/palmira.png?135' ></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa10" data-transition="slide"><img src='recursos/logos_empresas/cafiver.png?555' ></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa12" data-transition="slide"><img src='recursos/logos_empresas/pm_collection.png?345'></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa8" data-transition="slide"><img src='recursos/logos_empresas/el_horno.png?177' ></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa5" data-transition="slide"><img src='recursos/logos_empresas/mexique.png?120'></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa5" data-transition="slide"><img src='recursos/logos_empresas/la_mostaza.png?120'></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa5" data-transition="slide"><img src='recursos/logos_empresas/scattola.png?120'></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa5" data-transition="slide"><img src='recursos/logos_empresas/scattola_lounge.png?120'></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa5" data-transition="slide"><img src='recursos/logos_empresas/la_piccola.png?120'></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa5" data-transition="slide"><img src='recursos/logos_empresas/vina_dolores.png?120'></a>
-</div>
-<div class='empresa'>
-      <a href="#empresa5" data-transition="slide"><img src='recursos/logos_empresas/cointra.png?120'></a>
-</div>
+           
         </div>
 
     </div>
@@ -306,6 +242,305 @@
 </div>
 
 <!--Empresas-->
+<!-- jaguar-->
+<div data-role="page" id="empresa1" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/jaguar.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                A esta firma le trabajamos la fotografía de su producto, para la publicidad de la marca, así como toda la realización de lonas y banners para la misma publicidad, también se le realiza todo lo de manejo en redes sociales.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- land_rover-->
+<div data-role="page" id="empresa2" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/land_rover.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                A esta firma le trabajamos la fotografía de su producto, para la publicidad de la marca, así como toda la realización de lonas y banners para la misma publicidad, también se le realiza todo lo de manejo en redes sociales.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- la_vista-->
+<div data-role="page" id="empresa3" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/la_vista.png' >
+            </div>
+
+            <div class='texto_servicio'>
+               A esta firma se le realizó el diseño y programación de página web.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- san_angel-->
+<div data-role="page" id="empresa4" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/san_angel.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Diseño y programación de pagina web, en el caso de este cliente se mantiene en constante mantenimiento, es decir, actualiando las promociones y anuncios que quieran dar a conocer.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- la_mostaza-->
+<div data-role="page" id="empresa5" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/la_mostaza.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam massa urna, tristique in tempor et, ornare congue elit. Donec vel ante et enim rutrum pretium vel eget purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam mauris dolor, bibendum eget auctor condimentum, cursus eget leo. Cras vel neque a ipsum vulputate lobortis in quis diam. Cras eget congue justo. 
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- praga_15-->
+<div data-role="page" id="empresa6" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/praga_15.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Se realizo su Identidad Corporativa, así como el Diseño Web y programación, complementando esto con Fotografía  para diseños de publicaciones y aplicaciones.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- los_remedios-->
+<div data-role="page" id="empresa7" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/los_remedios.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Se consiguió el distintivo H con una calificación de 100/100,  fotografía  Social en eventos tanto como fotografía de producto.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- amalfi-->
+<div data-role="page" id="empresa8" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/amalfi.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Rediseño de identidad corporativa del restaurante junto con una seción fotográfica del menú, aplicaciones tales como menú, tarjetas de presentación, etc. y diseño pagina web programada.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- la_encomienda-->
+<div data-role="page" id="empresa9" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/la_encomienda.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Se renovo su distintivo H consiguiendo una calificación de 100/100, realizamos  Diseño y programación de pagina web, tanto como fotografía social  y de producto, diseño de artes para publicaciones en revistas y diseño Mailling.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- cafiver-->
+<div data-role="page" id="empresa10" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/cafiver.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Diseño de sitio web
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- palmira-->
+<div data-role="page" id="empresa11" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/palmira.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Se sertifico con el distintivo H, obteniendo una calificación aprobatoria de un 100/100.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
+
+<!-- pm_collection-->
+<div data-role="page" id="empresa12" class='cont_emp'>
+    <div data-role="header" data-position="fixed" id='cabecera' >
+        <div class='cebecera_up'></div>
+     <span class='btn_regresar'><a href="#" onClick="history.go(-1)" data-transition='slide' data-role="button" data-icon="back" data-mini="true" data-iconpos="notext" data-iconshadow="true" data-shadow="true" data-corners="true" ></a></span>
+        <h1><a href='#page' data-transition='slide'><img src='recursos/logo.png'></a></h1>
+    </div>
+
+    <div data-role="content" id="contenedor" >   
+       <div class="servicio">
+            <div class='img_servicio'><img src='recursos/img_muestra.png' width='100%'></div>
+
+            <div class='icon_servicio'>
+                <img src='recursos/logos_empresas/pm_collection.png' >
+            </div>
+
+            <div class='texto_servicio'>
+                Una pagina web de coleccionistas de arte, en la cual pueden subir lo que van adquiriendo y mostrandolo a publico, al igual que registrar usuarios para estar pendiendes de las nuevas obras.
+            </div>
+          
+        </div>      
+    </div>
+    
+</div>
 
 <!-- fin empresas-->
 <div data-role="page" id="llave_en_mano" class='cont_emp'>
@@ -478,7 +713,7 @@
                  
                  
                  
-                <div id='titulo2'>Selecciona un Servicio</div>
+                <div id='titulo'>Selecciona un Servicio</div>
                  <div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
                     <fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-vertical ui-mini" data-role="controlgroup" data-mini="true">
                         <div role="heading" class="ui-controlgroup-label"></div>
@@ -504,7 +739,7 @@
 
                     
 
-                    <div class="ui-block-b" ui-mini ui style='float:right; right:50px;'><span class="ui-btn-inner ui-btn-corner-all"><button aria-disabled="false" class="ui-btn-hidden" type="button" data-theme="a" data-mini="true" onclick='enviar();' id='btn_enviar'>Enviar</button></div>
+                    <div class="ui-block-b" ui-mini ui style='float:right; right:50px;'><span class="ui-btn-inner ui-btn-corner-all"><button aria-disabled="false" class="ui-btn-hidden" type="button" data-theme="a" data-mini="true" onclick='enviar();'>Enviar</button></div>
                 
                 </div>
                 
@@ -513,7 +748,12 @@
             </form>
         </div>
 
-  
+
+        <!--
+                <div class="ui-block-a"><button aria-disabled="false" class="ui-btn-hidden" type="submit" data-theme="d" data-mini="true">Cancelar</button></div>
+                <div class="ui-block-b" ui-mini ui><span class="ui-btn-inner ui-btn-corner-all"><button aria-disabled="false" class="ui-btn-hidden" type="submit" data-theme="a" data-mini="true">Enviar</button></div>
+                
+        </form>  -->     
     </div>
     
 </div>
@@ -524,7 +764,15 @@
 
 
 <script type="text/javascript">
+  /*  $(document).ready(function(e){
+    document.addEventListener("deviceready", function(){
 
+      alert("j");
+       
+        
+    
+    }); 
+});*/
     $(document).ready(function(){
 
 		 $("#immersive_slider").immersive_slider({
@@ -533,29 +781,28 @@
        //MEnu
 	   $( "#panelMenu" ).trigger( "updatelayout" );
 
-	  var conn = true;
-	checkConnection();
-	
-	//alert(conn ? "" : "Verifique su conexion a internet");
-	if(conn == true){}
-	else{alert("Verifique su conexion a internet");}
-	
-	function checkConnection() {
-		$.ajax({
-			url: 'http://www.jbandala.mx/jbapp/php/process.php',
-			async: false,
-			data: {'tag' : 'connection'}
-		})
-		.fail(function() { conn = false; })
-		.done(function() { conn = true; })
-	}
+	   CargarPortafolio();
 	   
     });
 
 
+    function CargarPortafolio()
+            {
+                $.ajax({
+                        type: "POST",
+                        url: "php/portafolio.php",
+                        data: "",
+                        cache: false,
+                        success: function(message)
+                        {
+                       $('#portafolio').html(message);
+                        }
+                    });
+        
+            } 
     function enviar()
       {
-        
+        alert();
         var nombre=$('#name').val();
         var email=$('#email').val();
         var telefono=$('#telefono').val();
@@ -565,16 +812,16 @@
 
         $.ajax(
         {
-          url: "http://www.jbandala.mx/jbapp/php/correo.php",
+          url: "php/correo.php",
           type: "POST",
           data: "nombre=" + nombre + "&telefono=" + telefono+ "&email=" + email + "&servicio=" + servicio + "&mensaje=" + mensaje,
           cache: false,
           processData:false,
           success: function(message)
           {
-         // alert("mensaje:"+message);
+          //alert("mensaje");
           if(message==1){
-            alert("Mensaje enviado");
+            alert("Mensaje Enviado");
             $('#name').val('');
            $('#email').val('');
             $('#telefono').val('');
@@ -583,7 +830,7 @@
             
           }
           else{
-            alert("Error al enviar el mensaje");
+            alert("no enviado");
             
           }
           }
